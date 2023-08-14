@@ -16,8 +16,9 @@ app.use(
 );
 
 // Connect to MongoDB
+
 mongoose
-  .connect("mongodb://127.0.0.1/recipe", {
+  .connect("mongodb+srv://ultimateblitz777:biDnAdK8KnLWFBBv@cluster0.yxhkjnl.mongodb.net/?retryWrites=true&w=majority", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
