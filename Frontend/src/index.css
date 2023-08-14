@@ -1,0 +1,324 @@
+:root {
+  font-family: Poppins, Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color-scheme: light dark;
+  /* color: rgba(255, 255, 255, 0.87); */
+  /* background-color: #952f25; */
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  font-weight: 500;
+  color: #952f25;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  background-color: #f3e8cb;
+  min-height: 100vh;
+  padding: 0;
+}
+
+h1 {
+  font-size: 2.3em;
+  line-height: 1.1;
+  margin-bottom: 5px;
+  margin-top: 120px;
+  color: #952f25;
+}
+
+.subtitle {
+  font-style: italic;
+  font-size: 18px;
+  font-weight: 500;
+  color: #952f25;
+  margin-top: 5px;
+}
+
+button {
+  border-radius: 8px;
+  border: none;
+  padding: 0.5em 0.8em;
+  font-size: 1.1em;
+  font-weight: 540;
+  font-family: inherit;
+  background-color: #6bbd5a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  background-color: rgb(115, 206, 134);
+}
+
+.search-btn{
+  margin-left: 10px;
+}
+
+.edit-btn{
+  margin-left: 10px; 
+}
+
+.delete-btn{
+  margin-left: 10px;
+}
+
+/* Delete Recipe CSS */
+.popup-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+  background-color: white;
+  /* color: #fff; */
+  border-radius: 5px;
+  z-index: 9999;
+}
+
+ul {
+  list-style-type: none;
+  /* text-align: center; */
+
+  padding:0;
+  margin:0;
+}
+
+ol{
+  list-style-type: none;
+  padding:0;
+  margin:0;
+}
+
+input{
+  width: 300px;
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    /* background-color: #ffffff; */
+  }
+  a:hover {
+    color: #59a34b;
+  }
+  button {
+    background-color: linear-gradient(to top, #2fbe2f 0%, #66ff66 100%);
+    
+  }
+  button:hover {
+    background: linear-gradient(to top, #2cb12c 0%, #5de95d 100%);
+  }
+}
+
+input {
+  padding: 10px;
+}
+
+.search-input {
+  font-size: 18px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  border-radius: 5px;
+  border: 1px rgb(145, 145, 145) solid;
+}
+
+img {
+  height: 170px;
+  width: 170px;
+}
+
+.eating {
+  width: 280px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  margin-bottom: 10px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #f3e8cb;
+  position: relative;
+}
+
+
+.logo a {
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #aa2a1f;
+}
+
+/* .menu-items {
+  display: flex;
+  align-items: center;
+} */
+
+.menu-item.open {
+  display: flex;
+  align-items: center;
+}
+
+.menu-items ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.menu-items ul li {
+  margin-right: 20px;
+}
+
+/* .menu-icon {
+  display: none;
+  cursor: pointer;
+} */
+
+/* .menu-icon__line {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin-bottom: 5px;
+  transition: transform 0.3s ease-in-out;
+} */
+
+/* .menu-icon__line.open {
+  transform: rotate(45deg);
+} */
+
+.menu-icon__line.open:nth-child(2) {
+  transform: rotate(-45deg);
+}
+
+.menu-icon__line.open:nth-child(3) {
+  display: none;
+}
+
+@media screen and (max-width: 425px) {
+  .hamburger {
+    color: black;
+  }
+  .menu-items {
+    display: none;
+  }
+  .menu-icon {
+    display: block;
+  }
+  .menu-icon__line {
+    background-color: #952f25;
+  }
+
+  .menu-icon__line.open:nth-child(1) {
+    display: none;
+  }
+  .menu-icon__line.open:nth-child(2) {
+    transform: rotate(-45deg) translate(-6px);
+  }
+  .menu-icon__line.open:nth-child(3) {
+    transform: rotate(45deg) translateX(-6px);
+    display: block;
+  }
+
+  .menu-items.open ul li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+/* MEDIA QUERRY 1024px */
+@media (min-width:1200px) {
+  .my-recipe-btn {
+    margin-right: 80px;
+  
+  }
+  
+  .menu-items.open {
+    display: flex;
+ 
+  
+  }
+  
+  .about-btn {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+  
+  .my-blog-btn {
+    margin-left: 8px;
+  }
+  
+  .p-about {
+    margin-top: 200px;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: justify;
+  }
+  
+  h3 {
+    margin-top: 100px;
+  }
+  
+  .p-myblog {
+    font-size: 18px;
+    font-weight: 400;
+    text-align: justify;
+    width: 100%;
+  }
+  
+  .indent-line {
+    display: inline-block;
+    margin-left: 2em;
+  }
+  
+  .App {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+  }
+  
+  .login-container{
+    display:grid;
+    place-items: center;
+    margin-top: 40px;
+  }
+  
+  .login-form{
+    border: 1px solid gray;
+    width: 450px;
+    /* height: 480px; */
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+  }
+  
+}
+
+
+/* @media screen and (min-width: 768px) {
+  .App {
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.create-recipe-btn {
+  margin-bottom: 15px;
+  margin-top: 15px;
+} */
