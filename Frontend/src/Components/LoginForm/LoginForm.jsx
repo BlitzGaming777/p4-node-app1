@@ -23,7 +23,7 @@ const LoginForm = () => {
     console.log("Sending request with:", email, password); 
     // Perform API call for login
     try {
-      const response = await fetch("http://localhost:3000/login", {
+      const response = await fetch("https://blitzgaming777backend.onrender.com/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

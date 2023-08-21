@@ -10,7 +10,7 @@ app.set("port", PORT);
 app.use(express.json());
 app.use(
   cors({
-    origin: ["http://localhost:5173", "http://localhost:5174"], // Replace with your frontend URL
+    origin: ["https://blitzgaming777frontend.onrender.com/", "https://blitzgaming777frontend.onrender.com/register"], // Replace with your frontend URL
     credentials: true,
   })
 );
