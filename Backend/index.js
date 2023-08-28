@@ -7,13 +7,25 @@ const PORT = process.env.PORT || 3000;
 
 app.set("port", PORT);
 
-app.use(express.json());
-app.use(
-  cors({
-    origin: ["https://blitzgaming777frontend.onrender.com/", "https://blitzgaming777frontend.onrender.com/register"], // Replace with your frontend URL
-    credentials: true,
-  })
-);
+// app.use(express.json());
+// app.use(
+//   cors({
+//     origin: ["https://blitzgaming777frontend.onrender.com/", "https://blitzgaming777frontend.onrender.com/register"], // Replace with your frontend URL
+//     credentials: true,
+//   })
+// );
+
+// Allow request from a specific domain
+const allowedOrigins = ['https://blitzgaming777frontend.onrender.com'];
+app.use(cors({
+  origin:(origin, callback) =>{
+    if (allowedOrigins.includes (origin) || !origin) {
+      callback(null, true);
+    } else{
+      callback(new Error('Not allowed by CORS'));
+    }
+  }
+}));
 
 // Connect to MongoDB
 
